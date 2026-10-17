@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <title>DIGITAL PROBATION</title>
+    <script>
+      (function () {
+        var segments = 1
+        var location = window.location
+        var prefix = location.pathname.split('/').slice(0, 1 + segments).join('/')
+        var rest = location.pathname.split('/').slice(1 + segments).join('/')
+        var search = location.search ? '&' + location.search.slice(1).replace(/&/g, '~and~') : ''
+        location.replace(
+          location.protocol + '//' + location.host + prefix + '/?/' +
+          rest.replace(/&/g, '~and~') + search + location.hash
+        )
+      })()
+    </script>
+  </head>
+  <body></body>
+</html>

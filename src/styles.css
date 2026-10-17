@@ -179,6 +179,9 @@ img { max-width: 100%; }
   min-height: 54px;
   border-radius: 14px;
   border: 1px solid #e4e9f0;
+  background: white;
+  color: var(--ink);
+  caret-color: var(--ink);
   box-shadow: 0 10px 30px rgba(16, 42, 67, 0.12);
   padding-left: 18px;
 }
@@ -376,9 +379,11 @@ input, select, textarea {
   border: 1px solid var(--line);
   border-radius: 12px;
   background: white;
+  color: var(--ink);
   padding: 12px 14px;
   min-height: 48px;
 }
+input::placeholder, textarea::placeholder { color: #98a2b3; }
 textarea { min-height: 110px; resize: vertical; }
 input:focus, select:focus, textarea:focus, button:focus-visible, a:focus-visible {
   outline: 3px solid rgba(26, 108, 181, 0.35);

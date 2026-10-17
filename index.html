@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="DIGITAL PROBATION — трудоустройство без барьеров. Демонстрационная информационная система."
+    />
+    <meta name="theme-color" content="#2f6fed" />
+    <title>DIGITAL PROBATION — Трудоустройство без барьеров</title>
+    <link rel="icon" href="%BASE_URL%favicon.svg" type="image/svg+xml" />
+    <script>
+      (function () {
+        var location = window.location
+        if (location.search[1] !== '/') return
+        var decoded = location.search.slice(1).split('&').map(function (part) {
+          return part.replace(/~and~/g, '&')
+        }).join('?')
+        window.history.replaceState(null, '', location.pathname.replace(/\/$/, '') + decoded + location.hash)
+      })()
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
